@@ -11,7 +11,7 @@ resource "aws_ses_email_identity" "ses_email_sender" {
 }
 
 resource "aws_ses_event_destination" "transactional-event-destination" {
-  name                   = "transactional-event-destination-sns"
+  name                   = "transactional-event-sns"
   configuration_set_name = aws_ses_configuration_set.transactional.name
   enabled                = true
   matching_types         = ["send", "reject", "bounce", "complaint", "delivery", "open", "click"]
@@ -22,7 +22,7 @@ resource "aws_ses_event_destination" "transactional-event-destination" {
 }
 
 resource "aws_ses_event_destination" "marketing-event-destination" {
-  name                   = "marketing-event-destination-sns"
+  name                   = "marketing-event-sns"
   configuration_set_name = aws_ses_configuration_set.marketing.name
   enabled                = true
   matching_types         = ["send", "reject", "bounce", "complaint", "delivery", "open", "click"]
