@@ -2,6 +2,14 @@
 
 ### Examples
 
+#### Claud Watch
+
+###### `ses-reputation-complaints-alarms`
+
+Requirements
+- send notification when complaint rate is higher than 0.1%
+- send notification when bounce rate is higher than 5%
+
 #### SES - Simple Email Service
 
 ###### `transactional_and_marketing_sets_with_ses`
